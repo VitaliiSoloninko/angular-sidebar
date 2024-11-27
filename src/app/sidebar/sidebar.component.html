@@ -8,4 +8,18 @@
 			<i class="fal fa-times close-icon"></i>
 		</button>
 	</div>
+	<div class="sidenav-nav">
+		@for (menuItem of menuItems; track $index) {
+		<li class="sidebar-nav-item">
+			<a
+				class="sidenav-nav-link"
+				[routerLink]="['menuItem.roteLink']"
+				routerLinkActive="active"
+				[routerLinkActiveOptions]="{ exact: true }"
+			></a>
+			<i class="sidenav-link-icon" [class]="menuItem.icon"></i>
+			<span class="sidenav-link-text">{{ menuItem.label }}</span>
+		</li>
+		}
+	</div>
 </div>
