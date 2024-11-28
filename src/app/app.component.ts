@@ -1,7 +1,7 @@
-import { Component } from '@angular/core'
+import { Component, signal } from '@angular/core'
 import { RouterOutlet } from '@angular/router'
-import { SidebarComponent } from './sidebar/sidebar.component'
 import { MainComponent } from './main/main.component'
+import { SidebarComponent } from './sidebar/sidebar.component'
 
 @Component({
 	selector: 'app-root',
@@ -11,5 +11,5 @@ import { MainComponent } from './main/main.component'
 	styleUrl: './app.component.scss',
 })
 export class AppComponent {
-	title = 'angular-sidebar'
+	isSidebarSmall = signal<boolean>(true)
 }
