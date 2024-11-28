@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common'
-import { Component, input } from '@angular/core'
+import { Component, input, output } from '@angular/core'
 import { RouterModule } from '@angular/router'
 
 @Component({
@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router'
 })
 export class SidebarComponent {
 	isSidebarSmall = input.required<boolean>()
+	changeSidebarState = output<boolean>()
 
 	menuItems = [
 		{
@@ -34,4 +35,8 @@ export class SidebarComponent {
 			linkText: 'Settings',
 		},
 	]
+
+	toggleSidebarLogo(): void {
+		this.changeSidebarState.emit(!this.isSidebarSmall())
+	}
 }

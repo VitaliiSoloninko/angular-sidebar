@@ -11,5 +11,9 @@ import { SidebarComponent } from './sidebar/sidebar.component'
 	styleUrl: './app.component.scss',
 })
 export class AppComponent {
-	isSidebarSmall = signal<boolean>(true)
+	isSidebarSmall = signal<boolean>(false)
+
+	changeSidebar(isSidebarSmall: boolean): void {
+		this.isSidebarSmall.set(isSidebarSmall)
+	}
 }

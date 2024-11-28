@@ -1,14 +1,14 @@
 <div class="sidenav" [ngClass]="isSidebarSmall() ? 'sidenav-small' : ''">
 	<div class="logo-container">
-		<button class="logo">
+		<button class="logo" (click)="toggleSidebarLogo()">
 			<i class="fal fa-bars"></i>
 		</button>
 		@if (!isSidebarSmall()){
 		<div class="logo-text">Sidebar</div>
-		}
 		<button class="btn-close">
 			<i class="fal fa-times close-icon"></i>
 		</button>
+		}
 	</div>
 	<div class="sidenav-nav">
 		@for (menuItem of menuItems; track $index) {
