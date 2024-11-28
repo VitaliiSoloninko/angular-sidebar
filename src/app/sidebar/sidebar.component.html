@@ -3,7 +3,9 @@
 		<button class="logo">
 			<i class="fal fa-bars"></i>
 		</button>
+		@if (!isSidebarSmall()){
 		<div class="logo-text">Sidebar</div>
+		}
 		<button class="btn-close">
 			<i class="fal fa-times close-icon"></i>
 		</button>
@@ -18,7 +20,9 @@
 				[routerLinkActiveOptions]="{ exact: true }"
 			>
 				<i class="sidenav-link-icon" [class]="menuItem.icon"></i>
-				<span class="sidenav-link-text">{{ menuItem.label }}</span>
+				@if (!isSidebarSmall()) {
+				<span class="sidenav-link-text">{{ menuItem.linkText }}</span>
+				}
 			</a>
 		</li>
 		}

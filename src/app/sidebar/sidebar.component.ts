@@ -16,22 +16,22 @@ export class SidebarComponent {
 		{
 			routerLink: 'dashboard',
 			icon: 'fal fa-home',
-			label: 'Dashboard',
+			linkText: 'Dashboard',
 		},
 		{
 			routerLink: 'products',
 			icon: 'fal fa-box-open',
-			label: 'Products',
+			linkText: 'Products',
 		},
 		{
 			routerLink: 'pages',
 			icon: 'fal fa-file',
-			label: 'Pages',
+			linkText: 'Pages',
 		},
 		{
 			routerLink: 'settings',
 			icon: 'fal fa-cog',
-			label: 'Settings',
+			linkText: 'Settings',
 		},
 	]
 }
