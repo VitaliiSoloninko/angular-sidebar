@@ -10,15 +10,16 @@
 	</div>
 	<div class="sidenav-nav">
 		@for (menuItem of menuItems; track $index) {
-		<li class="sidebar-nav-item">
+		<li class="sidenav-nav-item">
 			<a
 				class="sidenav-nav-link"
-				[routerLink]="['menuItem.roteLink']"
+				[routerLink]="[menuItem.routerLink]"
 				routerLinkActive="active"
 				[routerLinkActiveOptions]="{ exact: true }"
-			></a>
-			<i class="sidenav-link-icon" [class]="menuItem.icon"></i>
-			<span class="sidenav-link-text">{{ menuItem.label }}</span>
+			>
+				<i class="sidenav-link-icon" [class]="menuItem.icon"></i>
+				<span class="sidenav-link-text">{{ menuItem.label }}</span>
+			</a>
 		</li>
 		}
 	</div>
