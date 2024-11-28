@@ -39,4 +39,8 @@ export class SidebarComponent {
 	toggleSidebarLogo(): void {
 		this.changeSidebarState.emit(!this.isSidebarSmall())
 	}
+
+	closeSidebar(): void {
+		this.changeSidebarState.emit(true)
+	}
 }
