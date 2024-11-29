@@ -3,4 +3,7 @@
 	(changeSidebarState)="changeSidebar($event)"
 ></app-sidebar>
 
-<app-main></app-main>
+<app-main
+	[isSidebarSmall]="isSidebarSmall()"
+	[screenWidth]="screenWidth()"
+></app-main>
